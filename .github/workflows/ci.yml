@@ -13,16 +13,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    # 1. Скачиваем код
     - name: Checkout code
       uses: actions/checkout@v4
 
+    # 2. Устанавливаем Node.js
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '20.x'
 
+    # 3. Устанавливаем все зависимости, включая devDependencies
     - name: Install dependencies
       run: npm install --include=dev
 
+    # 4. Запускаем тесты через Jest
     - name: Run tests
       run: npm test
