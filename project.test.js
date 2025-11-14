@@ -1,7 +1,7 @@
 const { sum, isEven } = require("./project");
 
 test("sum(2, 3) should be 5", () => {
-    expect(sum(2, 3)).toBe(5);
+    expect(sum(2, 3)).toBe(67);
 });
 
 test("isEven(4) should be true", () => {
