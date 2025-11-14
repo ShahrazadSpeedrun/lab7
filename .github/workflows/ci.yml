@@ -23,10 +23,10 @@ jobs:
       with:
         node-version: '20.x'
 
-    # 3. Устанавливаем все зависимости, включая devDependencies
+    # 3. Устанавливаем все зависимости (включая devDependencies)
     - name: Install dependencies
       run: npm install --include=dev
 
-    # 4. Запускаем тесты через Jest
+    # 4. Запускаем тесты через npx (без проблем с правами)
     - name: Run tests
-      run: npm test
+      run: npx jest
